@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login - Global Haven Hotel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0066cc, #0099cc);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px 40px 12px 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .input-group .fa {
+      position: absolute;
+      top: 12px;
+      right: 15px;
+      color: #888;
+      cursor: pointer;
+    }
+
+    .login-btn {
+      width: 100%;
+      background: #0066cc;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background: #004a99;
+    }
+
+    .login-footer {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .login-footer a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .login-footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<div class="login-container">
+  <h2>Login to Your Account</h2>
+  <form action="login.php" method="POST">
+    <div class="input-group">
+      <input type="email" name="email" placeholder="Email address" required>
+      <i class="fa fa-envelope"></i>
+    </div>
+    <div class="input-group">
+      <input type="password" id="password" name="password" placeholder="Password" required>
+      <i class="fa fa-eye" id="togglePassword"></i>
+    </div>
+    <button type="submit" class="login-btn">Sign In</button>
+  </form>
+  <div class="login-footer">
+    <p>Don't have an account? <a href="register.html">Register here</a></p>
+    <p><a href="forgot-password.html">Forgot Password?</a></p>
+  </div>
+</div>
+
+<script>
+  const togglePassword = document.querySelector('#togglePassword');
+  const password = document.querySelector('#password');
+  togglePassword.addEventListener('click', function () {
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    this.classList.toggle('fa-eye-slash');
+  });
+</script>
+
+</body>
+</html>

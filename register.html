@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create Account - Global Haven Hotel</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0099cc, #0066cc);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .register-container {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 450px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .register-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    .input-group i {
+      position: absolute;
+      right: 15px;
+      top: 14px;
+      color: #888;
+    }
+
+    .register-btn {
+      width: 100%;
+      background: #0066cc;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .register-btn:hover {
+      background: #004a99;
+    }
+
+    .register-footer {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .register-footer a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .register-footer a:hover {
+      text-decoration: underline;
+    }
+
+    .input-group .fa-eye {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="register-container">
+  <h2>Create Your Account</h2>
+  <form action="register.php" method="POST">
+    <div class="input-group">
+      <input type="text" name="fullname" placeholder="Full Name" required>
+      <i class="fa fa-user"></i>
+    </div>
+    <div class="input-group">
+      <input type="email" name="email" placeholder="Email Address" required>
+      <i class="fa fa-envelope"></i>
+    </div>
+    <div class="input-group">
+      <input type="tel" name="phone" placeholder="Phone Number (e.g. +254...)" required>
+      <i class="fa fa-phone"></i>
+    </div>
+    <div class="input-group">
+      <input type="password" name="password" id="password" placeholder="Create Password" required>
+      <i class="fa fa-eye" id="togglePassword"></i>
+    </div>
+    <div class="input-group">
+      <input type="password" name="confirm_password" id="confirmPassword" placeholder="Confirm Password" required>
+      <i class="fa fa-eye" id="toggleConfirm"></i>
+    </div>
+    <button type="submit" class="register-btn">Register Now</button>
+  </form>
+  <div class="register-footer">
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+</div>
+
+<script>
+  const togglePassword = document.getElementById("togglePassword");
+  const toggleConfirm = document.getElementById("toggleConfirm");
+  const password = document.getElementById("password");
+  const confirm = document.getElementById("confirmPassword");
+
+  togglePassword.addEventListener("click", function () {
+    const type = password.type === "password" ? "text" : "password";
+    password.type = type;
+    this.classList.toggle("fa-eye-slash");
+  });
+
+  toggleConfirm.addEventListener("click", function () {
+    const type = confirm.type === "password" ? "text" : "password";
+    confirm.type = type;
+    this.classList.toggle("fa-eye-slash");
+  });
+</script>
+
+</body>
+</html>
