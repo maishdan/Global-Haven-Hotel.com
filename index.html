@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Luxury International Hotel - Book rooms, explore services, and enjoy a premium stay." />
+  <title>Global Haven Hotel | Home</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+    .navbar-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    .hero {
+      background: url('images/hotel-hero.jpg') no-repeat center center/cover;
+      height: 100vh;
+      color: white;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      background: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .services i {
+      font-size: 2.5rem;
+      color: #007BFF;
+      margin-bottom: 0.5rem;
+    }
+    .footer {
+      background: #222;
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Global Haven Hotel</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link btn btn-outline-primary btn-sm ms-2" href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero d-flex align-items-center">
+  <div class="container hero-content">
+    <h1>Welcome to Global Haven Hotel</h1>
+    <p class="lead">Where luxury meets comfort — across the world.</p>
+    <a href="book.html" class="btn btn-primary btn-lg mt-3">Book Now</a>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">Our Services</h2>
+    <div class="row g-4">
+      <div class="col-md-3">
+        <i class="fas fa-wifi"></i>
+        <h5 class="mt-2">Free Wi-Fi</h5>
+        <p>High-speed internet access throughout the hotel.</p>
+      </div>
+      <div class="col-md-3">
+        <i class="fas fa-utensils"></i>
+        <h5 class="mt-2">24/7 Dining</h5>
+        <p>World-class cuisine delivered to your room any time.</p>
+      </div>
+      <div class="col-md-3">
+        <i class="fas fa-swimming-pool"></i>
+        <h5 class="mt-2">Pool & Spa</h5>
+        <p>Relax and rejuvenate in our international spa & wellness center.</p>
+      </div>
+      <div class="col-md-3">
+        <i class="fas fa-shuttle-van"></i>
+        <h5 class="mt-2">Airport Shuttle</h5>
+        <p>Complimentary airport pickup and drop service for guests.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact CTA -->
+<section class="text-center py-5 bg-light">
+  <div class="container">
+    <h3>Have Questions or Special Requests?</h3>
+    <p>Our concierge is available 24/7 to assist you.</p>
+    <a href="contact.html" class="btn btn-dark">Contact Us</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 Global Haven Hotel. All rights reserved.</p>
+    <div>
+      <a href="#" class="text-light me-3"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
